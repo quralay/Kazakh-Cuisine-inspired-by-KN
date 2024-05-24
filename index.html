@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Music for Mental Health</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"
+      integrity="sha512-jduERlz7En1IUZR54bqzpNI64AbffZWR//KJgF71SJ8D8/liKFZ+s1RxmUmB+bhCnIfzebdZsULwOrbVB5f3nQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <main class="container">
+      <nav class="topnav">
+        <ul>
+          <li><a class="active" href="#home">Recipe page</a></li>
+          <li><a href="#playlist">Eats and Beats</a></li>
+          <li><a href="#artists">Kairat Nurtas Era</a></li>
+          <li><a href="#contact">Get in Touch</a></li>
+          <li class="search-container">
+            <form action="/search_results">
+              <input type="text" name="query" placeholder="Search.." />
+              <button type="submit" onclick="performSearch()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+      <img
+        src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/kuralay.png?v=1716545983718"
+        alt="Main"
+      />
+      <div id="search-results" class="search-results"></div>
+    </main>
+
+    <div>
+      Introducing the Ajemnin Dämi application, where you can learn how to cook
+      just like your grandmother and wow her with your culinary expertise. The
+      flavor will be exactly the same as what you used to consume in the Kazakh
+      villages, we can promise that. We would also want to warn you that it may
+      bring on a sense of nostalgia that may possibly bring tears to your eyes.
+      So be prepared!
+    </div>
+    <div>
+      <button>Kettik✓</button>
+    </div>
+  </body>
+  <div id="home">
+    <div class="card-group">
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/7980faeb-55a3-4fe4-ba48-259576857fdd.jpg?v=1716546082465"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <a class="active" href="#beshbarmak"><h5 class="card-title">Beshbarmak</h5></a>
+          <p class="card-text">
+            Beshbarmak, a beloved dish in Kazakh cuisine, is a symbol of
+            hospitality and tradition. Translating to "five fingers" in Kazakh,
+            Beshbarmak embodies the essence of communal dining, as it is
+            traditionally eaten with the hands, emphasizing the bond between
+            family and friends. This hearty dish consists of tender pieces of
+            boiled meat, typically lamb, beef, or horse meat, served atop large
+            flat noodles and generously adorned with savory broth. Beshbarmak's
+            roots trace back to the nomadic heritage of the Kazakh people, where
+            it served as a nourishing and comforting meal for weary travelers
+            and celebratory feasts alike. Today, it remains a cherished culinary
+            treasure, celebrated for its simplicity, flavor, and cultural
+            significance.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/9fd3161b13734f7fbadd71c80314bc57.jpg?v=1716546155125"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <a href="#kazy"><h5 class="card-title">Kazy</h5></a>
+          <p class="card-text">
+            Kazy, a cherished traditional dish in Kazakhstan, has an unique
+            place in the country's culinary heritage. It is a type of sausage
+            made from horse meat, particularly the rib meat, and seasoned with a
+            blend of spices. With its roots deeply embedded in nomadic culture,
+            kazy has been a staple food for centuries, providing sustenance for
+            Kazakh tribes during their journeys across the vast steppes. Today,
+            kazy remains an essential part of festive occasions and
+            celebrations, revered for its unique flavor and cultural
+            significance.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/1034169924_0_40_1199_794_1920x0_80_0_0_ee5a6878b8cfd39714776aeef2dc1bba.jpg?v=1716546169437"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <a href="#kuurdak"><h5 class="card-title">Kuurdak</h5></a>
+          <p class="card-text">
+            Kuurdak is a hearty and flavorful dish deeply rooted in Central
+            Asian culinary traditions, particularly prominent in Kazakh cuisine.
+            This beloved dish is characterized by its rich combination of tender
+            meat, typically lamb or beef, stir-fried with onions and potatoes
+            until golden and aromatic. Kuurdak's origins trace back to the
+            nomadic lifestyles of the region, where it served as a nourishing
+            meal for travelers and herders alike. Today, Kuurdak continues to
+            hold a cherished place on dining tables across Kazakhstan and
+            beyond, celebrated for its robust flavors and cultural significance.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/e922ef5b24a94fb889666121669c24fd.jpg?v=1716546464430"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <a href="#baursak"><h5 class="card-title">Baursak</h5></a>
+          <p class="card-text">
+            Baursak is a traditional Central Asian fried dough dish that holds a
+            significant place in Kazakh culture. This beloved treat is deeply
+            rooted in tradition, often served during special occasions,
+            celebrations, and family gatherings. Its origins can be traced back
+            to the nomadic lifestyle of the Kazakh people, where it served as a
+            portable and hearty source of sustenance on long journeys across the
+            vast steppes. Baursak is characterized by its golden-brown, crispy
+            exterior and soft, fluffy interior. Often shaped into small,
+            bite-sized pieces or intricate patterns, baursak is not only a
+            culinary delight but also a symbol of hospitality, warmth, and
+            cultural heritage in Kazakhstan.
+          </p>
+        </div>
+        <div class="card-footer"></div>
+      </div>
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/59969178.jpg?v=1716546429042"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <a href="#manti"><h5 class="card-title">Manti</h5></a>
+          <p class="card-text">
+            Manti, a beloved dish in Central Asian cuisine, is a type of
+            dumpling filled with seasoned meat and onions, typically served with
+            a dollop of sour cream or yogurt-based sauce. Originating from the
+            nomadic traditions of the region, manti reflects the resourcefulness
+            of its people, offering a hearty and satisfying meal that can be
+            enjoyed in various forms across different cultures. These delicate
+            parcels are often steamed or boiled to perfection, resulting in
+            tender pockets bursting with savory flavors. Whether served as a
+            comforting family meal or a festive dish for special occasions,
+            manti embodies the rich culinary heritage and communal spirit of
+            Central Asia.
+          </p>
+        </div>
+        <div class="card-footer"></div>
+      </div>
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/main_5.jpg?v=1716546423171"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <a href="#kurt"><h5 class="card-title">Kurt</h5></a>
+          <p class="card-text">
+            Kurt, a traditional Kazakh dairy product, holds a significant place
+            in Central Asian culinary heritage. Originating from the nomadic
+            culture of the region, Kurt is a form of dried cheese made from sour
+            milk. Its preparation involves a meticulous process of fermentation,
+            pressing, and air-drying, resulting in small, hardened cheese balls.
+            Rich in protein and beloved for its tangy flavor, Kurt served as a
+            portable and nutritious snack for nomadic herders during long
+            journeys across the vast steppes. Today, it remains a cherished
+            delicacy, enjoyed by locals and visitors alike for its unique taste
+            and cultural significance in Kazakh cuisine.
+          </p>
+        </div>
+        <div class="card-footer"></div>
+      </div>
+    </div>
+  </div>
+  <body>
+    <main>
+      <div id="playlist">
+        <h3>Eats and Beats</h3>
+        <img
+          src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/1200_0_b3f5987b6bb9675178a56dce0e24457a.jpg?v=1716566719704"
+        />
+        <div>
+          Welcome to our Cultural Playlist, where we've created a collection of
+          infectious tunes guaranteed to lift your spirits and make you want to
+          go to <b>TOIs and most importantly cook Kazakh foods</b>. On this
+          page, we connected different songs with different foods that can
+          inspire you to cook. Here you can find artists starting from our
+          favorite <b>Adai Kui</b> to the <b>legendary song Bal Kadisha</b>
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/track/50mN8y1zG4i03zpUPccfvW?utm_source=generator"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div>Kuy Music (Classical Kazakh Instrumental Music)</div>
+        <div>
+          Inspiration: Kuy music, with its intricate melodies and soulful
+          rhythms, evokes a sense of nostalgia and longing for the vast Kazakh
+          steppes.
+        </div>
+        <div>
+          Food Pairing: Beshbarmak - The elegant and timeless melodies of Kuy
+          music might inspire someone to prepare Beshbarmak, the quintessential
+          Kazakh dish. The rhythmic process of rolling out dough and simmering
+          meat could echo the meditative quality of Kuy compositions, creating a
+          harmonious culinary experience.
+        </div>
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/track/19khizypKWnDFjBkZN6mQp?utm_source=generator"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div>
+        Kobyz Music (Traditional Kazakh Instrumental Music with the Kobyz)
+      </div>
+      <div>
+        Inspiration: Kobyz music, characterized by its haunting tones and deep
+        resonance, often celebrates the connection between nature and humanity.
+      </div>
+      <div>
+        Food Pairing: Kuurdak - The raw and earthy sounds of the Kobyz could
+        inspire a connection to the land and traditional nomadic life. Cooking
+        Kuurdak, a dish of fried meat and potatoes, might feel like a tribute to
+        the pastoral lifestyle, with its simple yet hearty ingredients cooked
+        over an open flame.
+      </div>
+      <div>
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/track/6vJyB6GRuK5wqRhaFdokIt?utm_source=generator"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div>Dombra Music (Folk Music Played on the Dombra)</div>
+      <div>
+        Inspiration: Dombra music is vibrant and energetic, reflecting the
+        spirited nature of Kazakh culture and its people.
+      </div>
+      <div>
+        Food Pairing: Shashlik - The lively rhythms of Dombra music could evoke
+        a sense of celebration and camaraderie. Cooking Shashlik, skewered and
+        grilled meat, might feel like preparing for a festive gathering, with
+        the anticipation of sharing food and music with loved ones.
+      </div>
+      <div id="artists">
+        <h3>Kairat Nurtas Era</h3>
+        <div>
+          When cooking, most of us turn on some sort of background music.
+          We therefore created a playlist of Kairat Nurtas songs that would go
+          well with preparing three traditional Kazakh dishes.
+        </div>
+        <div class="card-deck">
+          <div class="card">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/track/6lEBtO2UwVILU8B0H23msN?utm_source=generator"
+              width="100%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+            <div class="card-body">
+              <h5 class="card-title">My Universe</h5>
+              <p class="card-text">
+                "My Universe" by Kairat Nurtas and Baursaks share a captivating
+                synergy rooted in tradition, comfort, and a sense of belonging.
+                The song's emotive melodies and heartfelt lyrics echo the warmth
+                and nostalgia ingrained in the Kazakh cultural heritage,
+                resonating with listeners on a deeply personal level. Similarly,
+                Baursaks, with their golden-brown exterior and soft, doughy
+                interior, evoke feelings of homecoming and familial love. Their
+                simple yet comforting presence on the table symbolizes the
+                timeless traditions and cherished memories passed down through
+                generations.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/track/5ujoxzk5s4ca7jn08ady5d?utm_source=generator"
+              width="100%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+            <div class="card-body">
+              <h5 class="card-title">Алматы түні</h5>
+              <p class="card-text">
+                "Aлматы түні," or "Almaty Night," is a song that captures the
+                vibrant energy and bustling atmosphere of Kazakhstan's largest
+                city, Almaty, especially during the evening hours when the city
+                comes alive with lights, music, and activity. This lively vibe
+                resonates perfectly with the spirit of a specific Kazakh dish:
+                Shashlik (шашлық), a traditional skewered and grilled meat dish
+                commonly enjoyed in social gatherings and outdoor settings.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/track/1aAFo3DeXUSIcIOZ0CTiOZ?utm_source=generator"
+              width="100%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+            <div class="card-body">
+              <h5 class="card-title">Эх, қарындас</h5>
+              <p class="card-text">
+                "Эх қарындас" (Ekh Qarindas) is a Kazakh term that conveys a
+                deep sense of nostalgia, longing, and affection. This phrase
+                encapsulates the emotional connection to cherished memories,
+                loved ones, and the traditions of the past. When paired with a
+                specific Kazakh dish, such as Beshbarmak (бешбармак), the
+                sentiment of "эх қарындас" perfectly complements the hearty and
+                communal nature of the meal.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer"></div>
+      <div id="contact">
+        <h3>Get in Touch</h3>
+        <div>
+          If you have any questions regarding the app, feel free to contact me
+          through<b> <div>kuralaygalikyzy@gmail.com</div></b>
+          <div><b>+7 771 859 0907</b></div>
+        </div>
+      </div>
+      <br /><br /><br /><br />
+    </main>
+    <main class="container">
+      <div class="dish">
+        <div id="beshbarmak">
+          <h3>Beshbarmak</h3>
+        </div>
+        <img
+          class="card-img-top"
+          src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/7980faeb-55a3-4fe4-ba48-259576857fdd.jpg?v=1716546082465"
+          alt="Beshbarmak"
+        />
+        <div>
+          Beshbarmak, a beloved dish in Kazakh cuisine, is a symbol of
+          hospitality and tradition. Translating to "five fingers" in Kazakh,
+          Beshbarmak embodies the essence of communal dining, as it is
+          traditionally eaten with the hands, emphasizing the bond between
+          family and friends. This hearty dish consists of tender pieces of
+          boiled meat, typically lamb, beef, or horse meat, served atop large
+          flat noodles and generously adorned with savory broth. Beshbarmak's
+          roots trace back to the nomadic heritage of the Kazakh people, where
+          it served as a nourishing and comforting meal for weary travelers and
+          celebratory feasts alike. Today, it remains a cherished culinary
+          treasure, celebrated for its simplicity, flavor, and cultural
+          significance.
+        </div>
+        <div>
+          <b>Ingredients:</b> meat, yellow onions, noodles, herbs, parsley,
+          dill, and scallion for topping
+        </div>
+        <div><b>Prep time:</b> 2 hours</div>
+        <div>
+          <iframe
+            width="420"
+            height="315"
+            src="https://youtu.be/CWMW_Zp2PrQ?si=6ihay3bu64qutV3B"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="dish">
+        <div id="kazy">
+        <h3>Kazy</h3>
+        </div>
+        <img
+          class="card-img-top"
+          src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/9fd3161b13734f7fbadd71c80314bc57.jpg?v=1716546155125"
+          alt="Kazy"
+        />
+        <div>
+          Kazy, a cherished traditional dish in Kazakhstan, has an unique place
+          in the country's culinary heritage. It is a type of sausage made from
+          horse meat, particularly the rib meat, and seasoned with a blend of
+          spices. With its roots deeply embedded in nomadic culture, kazy has
+          been a staple food for centuries, providing sustenance for Kazakh
+          tribes during their journeys across the vast steppes. Today, kazy
+          remains an essential part of festive occasions and celebrations,
+          revered for its unique flavor and cultural significance.
+        </div>
+        <div><b>Ingredients:</b> meat and fat taken from the ribs</div>
+        <div><b>Prep time:</b> 3 hours</div>
+        <div>
+          <iframe
+            width="420"
+            height="315"
+            src="https://www.youtube.com/watch?v=wfiAjDtiyk0&pp=ygULa2F6YWtoIGthenk%3D"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="dish">
+        <div id="kuurdak">
+        <h3>Kuurdak</h3>
+        </div>
+        <img
+          class="card-img-top"
+          src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/1034169924_0_40_1199_794_1920x0_80_0_0_ee5a6878b8cfd39714776aeef2dc1bba.jpg?v=1716546169437"
+          alt="Kuurdak"
+        />
+        <div>
+          Kuurdak is a hearty and flavorful dish deeply rooted in Central Asian
+          culinary traditions, particularly prominent in Kazakh cuisine. This
+          beloved dish is characterized by its rich combination of tender meat,
+          typically lamb or beef, stir-fried with onions and potatoes until
+          golden and aromatic. Kuurdak's origins trace back to the nomadic
+          lifestyles of the region, where it served as a nourishing meal for
+          travelers and herders alike. Today, Kuurdak continues to hold a
+          cherished place on dining tables across Kazakhstan and beyond,
+          celebrated for its robust flavors and cultural significance.
+        </div>
+        <div>
+          <b>Ingredients:</b> 1 1⁄2 lbs beef, 3 onions, 2 tomatoes, 1⁄4 cup
+          vegetable oil, 2 bay leaves, 2 cups broth, 1 1⁄2 teaspoons mixed
+          spice, for Kazakh and Uzbek recipes from recipe of that name, 1 lb
+          bread dough
+        </div>
+        <div><b>Prep time:</b> 2 hours</div>
+        <div>
+          <iframe
+            width="420"
+            height="315"
+            src="https://www.youtube.com/watch?v=Dkf7DCVmDZ0&pp=ygUOa2F6YWtoIGt1dXJkYWs%3D"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="dish">
+        <div id="baursak">
+        <h3>Baursak</h3>
+        </div>
+        <img
+          class="card-img-top"
+          src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/e922ef5b24a94fb889666121669c24fd.jpg?v=1716546464430"
+          alt="Baursak"
+        />
+        <div>
+          Baursak is a traditional Central Asian fried dough dish that holds a
+          significant place in Kazakh culture. This beloved treat is deeply
+          rooted in tradition, often served during special occasions,
+          celebrations, and family gatherings. Its origins can be traced back to
+          the nomadic lifestyle of the Kazakh people, where it served as a
+          portable and hearty source of sustenance on long journeys across the
+          vast steppes. Baursak is characterized by its golden-brown, crispy
+          exterior and soft, fluffy interior. Often shaped into small,
+          bite-sized pieces or intricate patterns, baursak is not only a
+          culinary delight but also a symbol of hospitality, warmth, and
+          cultural heritage in Kazakhstan.
+        </div>
+        <div>
+          <b>Ingredients:</b> 1.5kg white flour, 500ml lightly warmed milk, 1
+          tbsp salt, 3-4 tbsp sugar, 10g dried yeast, 2 eggs, 1 tbsp melted
+          butter
+        </div>
+        <div><b>Prep time:</b> 4 hours</div>
+        <div>
+          <iframe
+            width="420"
+            height="315"
+            src="https://www.youtube.com/watch?v=MGrZKlwH2_w&pp=ygUOa2F6YWtoIGJhdXJzYWs%3D"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="dish">
+        <div id="manti">
+        <h3>Manti</h3>
+        </div>
+        <img
+          class="card-img-top"
+          src="https://cdn.glitch.global/3a8b3b6c-aef9-4ca5-b878-a84abfa170e8/59969178.jpg?v=1716546429042"
+          alt="Manti"
+        />
+        <div>
+          Manti, a beloved dish in Central Asian cuisine, is a type of dumpling
+          filled with seasoned meat and onions, typically served with a dollop
+          of sour cream or yogurt-based sauce. Originating from the nomadic
+          traditions of the region, manti reflects the resourcefulness of its
+          people, offering a hearty and satisfying meal that can be enjoyed in
+          various forms across different cultures. These delicate parcels are
+          often steamed or boiled to perfection, resulting in tender pockets
+          bursting with savory flavors. Whether served as a comforting family
+          meal or a festive dish for special occasions, manti embodies the rich
+          culinary heritage and communal spirit of Central Asia.
+        </div>
+        <div>
+          <b>Ingredients:</b> ground beef or lamb, onions, garlic, tomato paste,
+          flour, eggs, and yoghurt
+        </div>
+        <div><b>Prep time:</b> 2 hours</div>
+        <div>
+          <iframe
+            width="420"
+            height="315"
+            src="https://www.youtube.com/watch?v=vwLftmW_g6w&pp=ygUMa2F6YWtoIG1hbnRp"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
